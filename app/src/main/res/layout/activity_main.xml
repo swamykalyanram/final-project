@@ -7,6 +7,7 @@
     tools:context="com.example.kalyanramswamy.final_project.MainActivity">
 
     <TextView
+        android:id="@+id/alert_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="waiting.."
