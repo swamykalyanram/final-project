@@ -40,20 +40,11 @@ public class alert_service extends Service implements OTPListener {
         //Do whatever you want to do with the text
         String[] parts = smsText.split("-");
         String alert = parts[1];
-        Vibrator v = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        v.cancel();
-        long pattern[] = { 0, 800, 200, 1200, 300, 2000, 400, 4000 };
 
         if (alert.contains("driver is sleepy")) {
-            v.vibrate(5000);
-            try {
-                Uri notification = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_RINGTONE);
-                Ringtone r = RingtoneManager.getRingtone(getApplicationContext(), notification);
-                r.play();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-            Toast.makeText(this,"driver is sleep",Toast.LENGTH_LONG).show();
+            Intent sound = new Intent(this, soundActivity.class);
+            sound.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            startActivity(sound);
         }
     }
 }
