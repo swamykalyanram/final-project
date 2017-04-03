@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">final-project</string>
+    <string name="app_name">Drowsiness Detection</string>
+
+    <string name="title_activity_sound">soundActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 </resources>
